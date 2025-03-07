@@ -1,0 +1,119 @@
+:root {
+  --main-bg: #fff0f7;
+  --text-color: #b30059;
+  --frame-border: #ff99c8;
+  --neon-glow: #ff69b4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-bg);
+  font-family: "Dancing Script", cursive;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.content-frame {
+  background: var(--main-bg);
+  border-radius: 20px;
+  padding: 30px;
+  border: 3px solid var(--frame-border);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  position: relative;
+  z-index: 2;
+  animation: neon-glow 2s infinite alternate;
+}
+
+@keyframes neon-glow {
+  from {
+    box-shadow: 0 0 10px var(--neon-glow);
+  }
+  to {
+    box-shadow: 0 0 20px var(--neon-glow);
+  }
+}
+
+.main-title {
+  color: var(--text-color);
+  font-size: 2.8em;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.poem-text {
+  color: var(--text-color);
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+}
+
+.gif-container {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gif-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.flower {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0;
+  animation: flowerFall 8s linear infinite;
+  z-index: 1;
+}
+
+@keyframes flowerFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.2em;
+  }
+  .poem-text {
+    font-size: 1.2em;
+  }
+  .content-frame {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.8em;
+  }
+  .poem-text {
+    font-size: 1em;
+  }
+}
