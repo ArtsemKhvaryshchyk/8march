@@ -117,3 +117,22 @@ body {
     font-size: 1em;
   }
 }
+.additional-text {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.funny-text {
+  font-size: 1.2em;
+  color: var(--text-color);
+  margin: 0;
+  animation: fadeIn 1s ease-out;
+}
+
+.apology-text {
+  font-size: 0.3em;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin: 5px 0 0 0;
+  animation: fadeIn 1.5s ease-out;
+}
